@@ -26,7 +26,7 @@ void cadastrar(projeto campo[MAX]){
 		if(i==MAX){	
 			system("cls");
 			printf("\n_______________________________________________________________________\n");
-			printf("\n\n>>>>>> BASE DE DADOS CHEIA: não há espaço para inserir novos projetos.\n");
+			printf("\n\n>>>>>> BASE DE DADOS CHEIA: nï¿½o hï¿½ espaï¿½o para inserir novos projetos.\n");
 			printf("\n_______________________________________________________________________\n\n");
 			system("pause");
 			return;
@@ -35,25 +35,25 @@ void cadastrar(projeto campo[MAX]){
 			system("cls");
 			printf("\n\n______________________CADASTRO DE PROJETOS_______________________\n\n");
 			campo[i].codigo=i+1;
-			printf("\n PROJETO Nº: %d\n\n", campo[i].codigo);
-			printf(" Qual o status do projeto? (1)A fazer (2)Fazendo (3)Concluído: ");
+			printf("\n PROJETO Nï¿½: %d\n\n", campo[i].codigo);
+			printf(" Qual o status do projeto? (1)A fazer (2)Fazendo (3)Concluï¿½do: ");
 			scanf("%d", &campo[i].status);
-			printf("\n Digite o título do projeto: ");
+			printf("\n Digite o tï¿½tulo do projeto: ");
 			fflush(stdin);
 			gets(campo[i].titulo);
-			printf(" Insira a descrição do projeto: ");
+			printf(" Insira a descriï¿½ï¿½o do projeto: ");
 			fflush(stdin);
 			gets(campo[i].desc);
 			printf(" Defina o Ano do projeto: ");
 			scanf("%d", &campo[i].ano);
 			fflush(stdin);
-			printf(" Defina o gerente resposável: ");
+			printf(" Defina o gerente resposï¿½vel: ");
 			fflush(stdin);
 			gets(campo[i].gerente);
 			printf(" Defina o tipo de projeto: ");
 			fflush(stdin);
 			gets(campo[i].tipo);
-			printf(" Insira o objetivo primário/principal: ");
+			printf(" Insira o objetivo primï¿½rio/principal: ");
 			fflush(stdin);
 			gets(campo[i].objt);
 			printf(" Insira o nome do cliente: ");
@@ -61,7 +61,7 @@ void cadastrar(projeto campo[MAX]){
 			gets(campo[i].cliente);
 			i++;
 		}
-		printf("\n Inserir OUTRO projeto? (1)Sim (2)Não: ");
+		printf("\n Inserir OUTRO projeto? (1)Sim (2)Nï¿½o: ");
 		scanf(" %d", &cad);
 		system("pause");	
 	}
@@ -76,13 +76,13 @@ void imprimir(projeto campo[MAX]){
 	printf("\n\t\t PROJETOS\n");
 	printf("_________________________________________\n");
 	for (i=0; i<MAX; i++){	
-		printf("\n Projeto Nº %d \n\n", campo[i].codigo);
-		printf(" Título: %s\n", campo[i].titulo);
-		printf(" Descrição: %s\n", campo[i].desc);
+		printf("\n Projeto Nï¿½ %d \n\n", campo[i].codigo);
+		printf(" Tï¿½tulo: %s\n", campo[i].titulo);
+		printf(" Descriï¿½ï¿½o: %s\n", campo[i].desc);
 		printf(" Ano: %d\n", campo[i].ano);
-		printf(" Gerente responsável: %s\n", campo[i].gerente);
+		printf(" Gerente responsï¿½vel: %s\n", campo[i].gerente);
 		printf(" Tipo de projeto: %s\n", campo[i].tipo);
-		printf(" Objetivo primário/principal: %s\n", campo[i].objt);
+		printf(" Objetivo primï¿½rio/principal: %s\n", campo[i].objt);
 		printf(" Cliente: %s\n", campo[i].cliente);
 		switch(campo[i].status){
 			case 1:
@@ -92,10 +92,10 @@ void imprimir(projeto campo[MAX]){
 				printf(" Status: Fazendo \n\n");
 			break;
 			case 3:
-				printf(" Status: Concluído \n\n");
+				printf(" Status: Concluï¿½do \n\n");
 			break;
 			default:
-				printf("\t>>>>>>>>  Opção inválida  <<<<<<<<<\n\n");
+				printf("\t>>>>>>>>  Opï¿½ï¿½o invï¿½lida  <<<<<<<<<\n\n");
 			break;	
 		}		
 	}
@@ -112,13 +112,13 @@ void busca3(projeto campo[MAX]){
 	j=0;
 	while(j<=i){
 		if(status==campo[j].status){
-			printf("\n Projeto Nº: %d\n\n", campo[j].codigo);
-			printf(" Título: %s\n", campo[j].titulo);
-			printf(" Descrição: %s\n", campo[j].desc);
+			printf("\n Projeto Nï¿½: %d\n\n", campo[j].codigo);
+			printf(" Tï¿½tulo: %s\n", campo[j].titulo);
+			printf(" Descriï¿½ï¿½o: %s\n", campo[j].desc);
 			printf(" Ano: %d\n", campo[j].ano);
 			printf(" Gerente: %s\n", campo[j].gerente);
 			printf(" Tipo: %s\n", campo[j].tipo);
-			printf(" Objetivo primário/principal: %s\n", campo[j].objt);
+			printf(" Objetivo primï¿½rio/principal: %s\n", campo[j].objt);
 			printf(" Cliente: %s\n\n", campo[j].cliente);
 		}
 		j++;	
@@ -135,13 +135,13 @@ void busca4(projeto campo[MAX]){
 	j=0;
 	while(j<=i){
 		if(status==campo[j].status){
-			printf("\n Projeto Nº: %d\n", campo[j].codigo);
-			printf(" Título: %s\n", campo[j].titulo);
-			printf(" Descrição: %s\n", campo[j].desc);
+			printf("\n Projeto Nï¿½: %d\n", campo[j].codigo);
+			printf(" Tï¿½tulo: %s\n", campo[j].titulo);
+			printf(" Descriï¿½ï¿½o: %s\n", campo[j].desc);
 			printf(" Ano: %d\n", campo[j].ano);
 			printf(" Gerente: %s\n", campo[j].gerente);
 			printf(" Tipo: %s\n", campo[j].tipo);
-			printf(" Objetivo primário/principal: %s\n", campo[j].objt);
+			printf(" Objetivo primï¿½rio/principal: %s\n", campo[j].objt);
 			printf(" Cliente: %s\n\n", campo[j].cliente);
 		}
 		j++;			
@@ -152,19 +152,19 @@ void busca4(projeto campo[MAX]){
 void busca5(projeto campo[MAX]){
 	int status,j;
 	printf("\n_______________________________________________________\n\n");
-	printf("\t   PROJETOS COM STATUS: Concluído\n");
+	printf("\t   PROJETOS COM STATUS: Concluï¿½do\n");
 	printf("_______________________________________________________\n");
 	status=3;
 	j=0;
 	while(j<=i){
 		if(status==campo[j].status){
-			printf("\n Projeto Nº: %d\n", campo[j].codigo);
-			printf(" Título: %s\n", campo[j].titulo);
-			printf(" Descrição: %s\n", campo[j].desc);
+			printf("\n Projeto Nï¿½: %d\n", campo[j].codigo);
+			printf(" Tï¿½tulo: %s\n", campo[j].titulo);
+			printf(" Descriï¿½ï¿½o: %s\n", campo[j].desc);
 			printf(" Ano: %d\n", campo[j].ano);
 			printf(" Gerente: %s\n", campo[j].gerente);
 			printf(" Tipo: %s\n", campo[j].tipo);
-			printf(" Objetivo primário/principal: %s\n", campo[j].objt);
+			printf(" Objetivo primï¿½rio/principal: %s\n", campo[j].objt);
 			printf(" Cliente: %s\n\n", campo[j].cliente);
 		}
 		j++;		
@@ -175,21 +175,21 @@ void busca5(projeto campo[MAX]){
 void busca6(projeto campo[MAX]){
 	int codigo,j;
 	printf("\n__________________________________________\n\n");
-	printf(" PROJETO POR: Código\n");
+	printf(" PROJETO POR: Cï¿½digo\n");
 	printf("__________________________________________\n\n");
-	printf(" Qual o código do projeto? ");
+	printf(" Qual o cï¿½digo do projeto? ");
 	scanf("%d", &codigo);
 	j=0;
 	while(j<=i){
 		if(codigo==campo[j].codigo){
-			printf("\n Projeto Nº: %d\n", campo[j].codigo);
+			printf("\n Projeto Nï¿½: %d\n", campo[j].codigo);
 			printf(" Status: %d\n", campo[j].status);
-			printf(" Título: %s\n", campo[j].titulo);
-			printf(" Descrição: %s\n", campo[j].desc);
+			printf(" Tï¿½tulo: %s\n", campo[j].titulo);
+			printf(" Descriï¿½ï¿½o: %s\n", campo[j].desc);
 			printf(" Ano: %d\n", campo[j].ano);
 			printf(" Gerente: %s\n", campo[j].gerente);
 			printf(" Tipo: %s\n", campo[j].tipo);
-			printf(" Objetivo primário/principal: %s\n", campo[j].objt);
+			printf(" Objetivo primï¿½rio/principal: %s\n", campo[j].objt);
 			printf(" Cliente: %s\n\n", campo[j].cliente);		
 		}
 		j++;	
@@ -198,13 +198,13 @@ void busca6(projeto campo[MAX]){
 }
 
 void menu(){
-	printf("\n==================== MENU OPÇÕES ======================\n\n");	
+	printf("\n==================== MENU OPï¿½ï¿½ES ======================\n\n");	
 	printf("\t1 - Cadastrar novo projeto.\n");
 	printf("\t2 - Imprimir todos os projetos.\n");
 	printf("\t3 - Imprimir projetos com o Status: A Fazer.\n");
 	printf("\t4 - Imprimir projetos com o Status: Fazendo.\n");
-	printf("\t5 - Imprimir projetos com o Status: Concluído.\n");
-	printf("\t6 - Imprimir projetos por código.\n");
+	printf("\t5 - Imprimir projetos com o Status: Concluï¿½do.\n");
+	printf("\t6 - Imprimir projetos por cï¿½digo.\n");
 	printf("\t0 - Sair.\n");
 }
 
@@ -238,7 +238,7 @@ int main(){
 			case 0:
 				break;
 			default:
-				printf("\t>>>>>>>  Opção inválida  <<<<<<<<<\n\n");
+				printf("\t>>>>>>>  Opï¿½ï¿½o invï¿½lida  <<<<<<<<<\n\n");
 				system("pause");
 				break;		
 		}
